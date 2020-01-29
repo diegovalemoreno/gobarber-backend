@@ -1,3 +1,4 @@
+
 # gobarber
 ## Aula 4 - Configurando Docker
 Baixar o docker [Mac, Linux, Windows](https://docs.docker.com/install/ "Mac, Linux, Windows")
@@ -56,28 +57,27 @@ Agora ver o banco funcionando, pode conectar com linha de comando no terminal ou
 
 Só usar os dados da conexão para poder conectar-se no postgres.
 
-e criar o banco de dados: ```sql
-create database gobarber
-```
+e criar o banco de dados:  
+`create database gobarber`
+
 
 Quando reinicia a máquina, o docker para, para subir novamente só seguir os comandos:
 
 docker ps -a para mostrar todos os container mesmo os que não estão em execução.
 
 ###### Para subir o container:
-
-    docker  start postgres 
+    ❯ docker  start postgres 
 Pode ser o ID ou o nome do container.
 
 ###### Para ver os logs do container:
 
-    docker logs postgres
+    ❯ docker logs postgres
 	
 
 O mesmo container pode ser usado para outras aplicações, mas tem como fazer um container apenas para a aplicação.
 
 ###### Para remover um container:
 
-    docker rm "ID ou nome do container"
+    ❯ docker rm "ID ou nome do container"
 
 Veja o código: https://github.com/diegovalemoreno/gobarber-backend/tree/aula4
