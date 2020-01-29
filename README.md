@@ -28,7 +28,13 @@ Se já estiver com postgres na máquina sem ter sido instalado pelo Docker, e se
 
     ❯ docker image ls
 
-[![docker image ls](https://ibb.co/XYb46BN "Docker image ls")](https://ibb.co/XYb46BN "Docker image ls")
+<!-- DOCKER IMAGE LS -->
+<br />
+<p align="center">
+  <img src="https://github.com/diegovalemoreno/gobarber-backend/blob/aula4/images/docker_image.png" alt="DOCKER IMAGE LS">
+
+  <h3 align="center">docker image ls</h3>
+</p>
 
 Vai listar todas as imagens e seus respectivos IDs.
 
@@ -36,7 +42,13 @@ E para conferir se está rodando, só rodar docker ps, com isso ele vai listar t
 
     ❯ docker ps                 
 
-[![docker ps](https://ibb.co/3RksHp6 "docker ps")](https://ibb.co/3RksHp6 "docker ps")
+<!-- DOCKER PS -->
+<br />
+<p align="center">
+  <img src="https://github.com/diegovalemoreno/gobarber-backend/blob/aula4/images/docker_ps.png" alt="DOCKER PS">
+
+  <h3 align="center">docker ps</h3>
+</p>
 
 Agora ver o banco funcionando, pode conectar com linha de comando no terminal ou instalar uma GUI chamada **postbird**:
 
