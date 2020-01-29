@@ -1,5 +1,5 @@
 # gobarber
-## Aula 4 - Mão na Massa
+## Aula 4 - Configurando Docker
 Baixar o docker [Mac, Linux, Windows](https://docs.docker.com/install/ "Mac, Linux, Windows")
 
 Para ver se está instalado docker -v ou docker -help
