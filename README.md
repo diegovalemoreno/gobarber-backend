@@ -1,6 +1,6 @@
 
 # gobarber
-##Aula 5 - Sequelize & MVC
+## Aula 5 - Sequelize & MVC
 
 Sequelize é um **ORM (Object-relational mapping)**, basicamente ele faz o mapeamento dos objetos como entidade no banco de dados. Os bancos de dados tem um conceito de Entidade, Tabelas, Atributos, e a aplicação tem o conceito de Objetos, Atributos ou propriedades e métodos ou função. O que o ORM faz é mapear o objeto, criando uma tabela e os atributos mapeando para campos do banco de dados. O Sequelize também ajuda a fazer as consultas do banco de dados, em vez de usar SQL nativo, podemos usar objetos com seus respectivos métodos, e escrever javascript para fazer operações de CRUD persistência no BD.
 
