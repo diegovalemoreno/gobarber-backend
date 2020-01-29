@@ -66,19 +66,18 @@ Quando reinicia a máquina, o docker para, para subir novamente só seguir os co
 docker ps -a para mostrar todos os container mesmo os que não estão em execução.
 
 ###### Para subir o container:
-
-    docker  start postgres 
+    ❯ docker  start postgres 
 Pode ser o ID ou o nome do container.
 
 ###### Para ver os logs do container:
 
-    docker logs postgres
+    ❯ docker logs postgres
 	
 
 O mesmo container pode ser usado para outras aplicações, mas tem como fazer um container apenas para a aplicação.
 
 ###### Para remover um container:
 
-    docker rm "ID ou nome do container"
+    ❯ docker rm "ID ou nome do container"
 
 Veja o código: https://github.com/diegovalemoreno/gobarber-backend/tree/aula4
