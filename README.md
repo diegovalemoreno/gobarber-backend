@@ -1,12 +1,31 @@
 # gobarber
-## Aula 1 - Configurando o Projeto
+## Aula 2 - Nodemon & Sucrase
+Para utilizar o import/export podemos utilizar o babel ou outras ferramentas, mas nesse projeto iremos utilizar sucrase que é bem rápido e fácil.
 
-Uma maneira legal de estruturar o backend é utilizar Classes.
+yarn add sucrase nodemon -D
 
-Nesse commit foi criado um projeto com node, usando yarn init -y e instalado a dependência do express.
+Pronto agora só alterar para import/export
 
-Foi estruturado as pastas, separando a lógica da aplicação. As rotas são middlewares também, porém, elas ficam separadas dos middlewares para dar mais semântica.
+Entretanto, não podemos mais rodar node src/index.js para executar o projeto.
 
-O servidor foi inicializado de dentro do server.js onde a instância do app foi importada, isso desacopla para facilitar no teste.
+Pode ser assim: yarn sucrase-node src/server.js
 
-Veja o código: https://github.com/diegovalemoreno/gobarber-backend/tree/aula1
+Mas eu quero utilizar o nodemon também.
+
+Nodemon detecta atualização no código e reinicializa o servidor.
+
+Preciso criar um arquivo `nodemon.json na raiz do projeto, com a seguinte configuração:
+
+{
+  "execMap": {
+    "js": "sucrase-node"
+  }
+}
+Lá no package.json crio um script:
+
+"scripts": {
+    "dev": "nodemon src/server"
+  },
+e agora posso executar o projeto com: yarn dev
+
+Veja o código: https://github.com/diegovalemoreno/gobarber-backend/tree/aula2

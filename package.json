@@ -4,9 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/server.js"
-},
+    "start": "node src/server.js",
+    "dev": "nodemon src/server"
+  },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1"
   }
 }
