@@ -1,3 +1,4 @@
+
 # gobarber
 ## Aula 4 - Configurando Docker
 Baixar o docker [Mac, Linux, Windows](https://docs.docker.com/install/ "Mac, Linux, Windows")
@@ -56,9 +57,9 @@ Agora ver o banco funcionando, pode conectar com linha de comando no terminal ou
 
 Só usar os dados da conexão para poder conectar-se no postgres.
 
-e criar o banco de dados: ```sql
-create database gobarber
-```
+e criar o banco de dados:  
+`create database gobarber`
+
 
 Quando reinicia a máquina, o docker para, para subir novamente só seguir os comandos:
 
