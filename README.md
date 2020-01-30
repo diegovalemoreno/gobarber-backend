@@ -1,5 +1,5 @@
 # gobarber
-##Aula 6 - Padrão de código - Eslint, Prettier & EditorConfig
+## Aula 6 - Padrão de código - Eslint, Prettier & EditorConfig
 
 Padrão de código é muito útil quando se está trabalhando com um time, pq cada um pode fazer as coisas de sua maneira e a base de código não vai ficar muito boa, tem desenvolvedor que vai usar var, outro const, e outro let, vai pular linha no final, outro não vai, vai usars export default, e outro não, e isso gera uma bagunça, e aí com isso temos algumas ferramentas que ajudam a definir as regras(padrão) de código e um estilizador de código utilizando as regras, e o mais adotado na comunidade JS, é o Eslint para definir as regras e o Prettier para formatar o código conforme as regras definidas no Eslint.
 
