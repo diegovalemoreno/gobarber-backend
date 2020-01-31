@@ -19,9 +19,9 @@ module.exports = {
 
 #### Configurando o database:
 
-adiciono as dependencias: ```javascript
-yarn add pg pg-hstore
-```
+adiciono as dependencias:
+`yarn add pg pg-hstore`
+ 
 no arquivo **config/database.js**:
 
     module.exports = {
