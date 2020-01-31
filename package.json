@@ -9,7 +9,7 @@
     }
   },
   "lint-staged": {
-    "*.js":["eslint --fix", "git add"]
+    "*.js":["yarn eslint --fix src --ext .js", "git add"]
   },
   "scripts": {
     "start": "node src/server.js",
