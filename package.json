@@ -5,11 +5,15 @@
   "license": "MIT",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "lint-staged": {
-    "*.js":["yarn eslint --fix src --ext .js", "git add"]
+    "*.js": [
+      "yarn eslint --fix src --ext .js",
+      "git add"
+    ]
   },
   "scripts": {
     "start": "node src/server.js",
@@ -17,12 +21,16 @@
     "eslintify": "yarn eslint --fix src --ext .js"
   },
   "dependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "express": "^4.17.1",
     "pg": "^7.18.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.10.0",
@@ -30,9 +38,16 @@
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.6",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
     "sequelize-cli": "^5.5.1",
     "sucrase": "^3.12.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
