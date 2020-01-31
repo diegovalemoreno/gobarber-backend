@@ -25,10 +25,11 @@ Quando esse arquivo é importando, ele recebe uma instância do Database, que ch
 
 #####  Não esquecer de criar import dentro do arquivo App.js para o arquivo index.js que exporta o modulo Database.
 
-````
-import './database';
-
 ```
+import './database';
+```
+
+------------
 
 ```
 // Quando chamo a rota '/', cadastro o usuário e retorno os dados do banco de dados
