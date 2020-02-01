@@ -1,45 +1,9 @@
-## Aula 12 - Enviando password_hash
+## Aula 13 - Conceitos de JWT
+Json Web Token([JWT](https://jwt.io "JWT")) , server para fazer autenticação.
 
-Quando o usuário digita a senha e envia para o controllers, queremos que seja gerado um hash para salvar a senha no banco de dados, e posteriormente quando ele for fazer login, ele digita a senha normal, e geramos um hash e comparamos com o hash que foi salvo no password_hash do banco de dados, se for igual, ok, está autenticado.
+**JWT (JSON Web Token)** é um sistema de transferência de dados que pode ser enviado via POST ou em um cabeçalho HTTP (header) de maneira “segura”, essa informação é assinada digitalmente por um algoritmo HMAC, ou um par de chaves pública/privada usando RSA. ([Saiba mais...](https://imasters.com.br/desenvolvimento/json-web-token-conhecendo-o-jwt-na-teoria-e-na-pratica "Saiba mais..."))
 
-Para fazer isso precisamos de uma lib para gerar o hash do password:
+Gera um token com headers (tipo de token, algoritmo), Payload (Dados adicionais) e Assinatura ( o que garante a veracidade do token, não pode ser modificado).
 
-    yarn add bcryptjs
-
-**Bcryptjs** é utilizado no model de User, criamos um campo virtual, que é utilizado para receber o password do frontend e que é feito o hasg para através da lib bcrypt para a variável password_hash que essa sim é uma String que é salva no banco de dados.
-
-A model **user.js** ficará assim:
-
-```javascript
-import Sequelize, { Model } from 'sequelize';
-import bcrypt from 'bcryptjs';
-
-class User extends Model {
-  static init(sequelize) {
-    super.init(
-      {
-        name: Sequelize.STRING,
-        email: Sequelize.STRING,
-        password: Sequelize.VIRTUAL,
-        password_hash: Sequelize.STRING,
-        provider: Sequelize.BOOLEAN,
-      },
-      {
-        sequelize,
-      }
-    );
-    this.addHook('beforeSave', async (user) => {
-      if(user.password) {
-        user.password_hash = await bcrypt.hash(user.password, 8)
-      }
-      return this;
-    })
-  }
-}
-
-export default User;
-
-```
-
-Veja o código: https://github.com/diegovalemoreno/gobarber-backend/tree/aula12
+Veja o código: https://github.com/diegovalemoreno/gobarber-backend/tree/aula13
 
