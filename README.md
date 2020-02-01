@@ -1,4 +1,4 @@
-## Aula Aula 16 - Update do usuário
+## Aula 16 - Update do usuário
 Código do update do usuário no arquivo: **UserController.js**
 
   ```javascript
